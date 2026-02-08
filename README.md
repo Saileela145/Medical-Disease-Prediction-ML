@@ -36,6 +36,8 @@ Target variable indicates whether the patient has the disease (Yes / No).
 ## 🎯 Objective
 To compare multiple classification algorithms and identify the best-performing model for medical disease prediction while addressing overfitting and bias-variance trade-off.
 
+## Programming Language
+- Python (implemented using Jupyter Notebook)
 
 ## 📌 What We Did in This Project
 
