@@ -1,0 +1,27 @@
+name: Daily Auto Update
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # Runs daily at 6 AM UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Update log file
+      run: |
+       echo "- Health check passed on $(date)" >> project_health_log.md
+
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add daily_log.txt
+        git commit -m "Daily automated update"
+        git push
