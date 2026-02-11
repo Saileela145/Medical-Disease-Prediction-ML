@@ -17,8 +17,8 @@ glucose = st.number_input("Glucose Level")
 blood_pressure = st.number_input("Blood Pressure")
 skin_thickness = st.number_input("Skin Thickness")
 insulin = st.number_input("Insulin Level")
-bmi = st.number_input("BMI")
-dpf = st.number_input("Diabetes Pedigree Function")
+bmi = st.number_input("BMI", min_value=0.0, max_value=70.0)
+dpf = st.number_input("Diabetes Pedigree Function", min_value=0.0, max_value=2.5)
 age = st.number_input("Age", min_value=0)
 
 if st.button("Predict"):
